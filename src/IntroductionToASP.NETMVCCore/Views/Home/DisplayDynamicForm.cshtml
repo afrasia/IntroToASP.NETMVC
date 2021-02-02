@@ -1,0 +1,22 @@
+﻿
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Dynamic";
+}
+
+<h3>Dynamic View</h3>
+<form asp-controller="Home" asp-action="DisplayDynamicFormData" method="post">
+    <table>
+        <tr>
+            <td>Choose one:</td>
+            <td>
+                @Html.DropDownList("PersonDropDown", new List<SelectListItem>
+                {
+                    new SelectListItem{ Text="Student", Value = "Student" },
+                    new SelectListItem{ Text="Teacher", Value = "Teacher" }
+                 })
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="Select" />
+</form>

@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>@ViewData["Title"]</title>
+        <link href="~/css/StyleSheet.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header>
+            Header!  @ViewBag.title
+            <br />
+            <br />
+            @Html.ActionLink("Hello World", "Index", "Home") <br/>
+            @Html.ActionLink("Razor Example", "Razor", "Home") <br/>
+            @Html.ActionLink("Create Session Data (using 'Loosely Typed' view)", "CreateSession", "Home") <br/>
+            @Html.ActionLink("Create View Data (using 'Loosely Typed' view)", "CreateViewData", "Home") <br/>
+            @Html.ActionLink("Create Form Data (using 'Strongly Typed' view)", "Form", "Home") <br/>
+            @Html.ActionLink("Show Student/Teacher (using 'Dynamic View')", "DisplayDynamicForm", "Home") <br/>
+        </header>
+        <div class="content">
+            @RenderBody()
+        </div>
+        <footer>
+            Footer!
+        </footer>
+    </body>
+</html>

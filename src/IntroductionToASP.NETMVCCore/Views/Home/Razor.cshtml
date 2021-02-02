@@ -1,0 +1,81 @@
+﻿@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Razor";
+
+    var i = 0;
+    string[] schools = { "Algonquin", "uOttawa", "Carleton", "other" };
+}
+
+<h3>@@Razor Examples</h3>
+<h4>for</h4>
+@for (i = 0; i < 100; i++)
+{
+    @if (i % 10 == 0)
+    {
+        <p>Count @i</p>
+    }
+}
+<h4>foreach</h4>
+@foreach (var school in schools)
+{
+    switch (school)
+    {
+        case "Algonquin":
+            <p>My name is @school and my official colors are white and green.</p>
+            break;
+        case "uOttawa":
+            <p>My name is @school and my official colors are grey and garnet.</p>
+            break;
+        case "Carleton":
+            <p>My name is @school and my official colors are black and red.</p>
+            break;
+        default:
+            <p>I don't know my official colors!</p>
+            break;
+    }
+}
+<h4>while</h4>
+<table style="border: solid 1px black; border-collapse: collapse;">
+    @{
+        i = 0;
+        while (i < 100)
+        {
+            <tr style="margin: 0; border-spacing: 0;">
+                @if (i % 10 == 0)
+                {
+                    <td style="border: solid 1px black; padding: 4px;">Count</td>
+                    <td style="border: solid 1px black; padding: 4px;">@i</td>
+                }
+            </tr>
+
+            i++;
+        }
+    }
+</table>
+<br />
+finishing up at @i
+<br />
+half of @i = @(i / 2)
+<br />
+@("<span>Razor is fun!</span>")
+<br />
+@Html.Raw("<span>Razor is fun again!</span>")
+<br />
+@functions {
+    public string GetMessage()
+    {
+        return "Razor is fun again and again!";
+    }
+}
+Show message: @GetMessage()
+<br/>
+@{
+
+    var b = 2;
+    @:b = 2;
+
+    @*
+        Lets add a comment here about @:
+        see how we just used @: and printed the line text above!
+    *@
+}
