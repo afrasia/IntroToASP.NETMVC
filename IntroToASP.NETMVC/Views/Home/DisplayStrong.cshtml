@@ -1,4 +1,4 @@
-﻿@model IntroductionToASP.NETMVCCore.Models.LoginInformationModel
+﻿@model IntroToASP.NETMVC.Models.LoginInformationModel
 @{
     Layout = "_Layout";
     ViewData["Title"] = "Display Form";
@@ -19,7 +19,8 @@
             Password:
         </td>
         <td>
-            @Model.Password
+            @*Normally we do not show passwords, here we show them for educational purposes*@
+            @Model.Password  
         </td>
     </tr>
 </table>

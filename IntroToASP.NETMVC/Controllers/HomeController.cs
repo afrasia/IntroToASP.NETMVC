@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using IntroToASP.NETMVC.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Http;
-using IntroductionToASP.NETMVCCore.Models;
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace IntroductionToASP.NETMVCCore.Controllers
+namespace IntroToASP.NETMVC.Controllers
 {
     public class HomeController : Controller
     {
@@ -19,7 +14,7 @@ namespace IntroductionToASP.NETMVCCore.Controllers
         }
 
         [HttpGet]
-        public IActionResult Razor()
+        public IActionResult RazorSyntaxDemo()
         {
             return View();
         }
@@ -54,25 +49,25 @@ namespace IntroductionToASP.NETMVCCore.Controllers
         }
 
         [HttpGet]
-        public IActionResult Form()
+        public IActionResult CreateStrong()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult DisplayForm(LoginInformationModel model)
+        public IActionResult DisplayStrong(LoginInformationModel model)
         {
             return View(model);
         }
 
         [HttpGet]
-        public IActionResult DisplayDynamicForm()
+        public IActionResult CreateDynamic()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult DisplayDynamicFormData()
+        public IActionResult DisplayDynamic()
         {
             var res = Request.Form["personDropDown"].ToString();
             if (res.Equals("Student"))
@@ -85,8 +80,7 @@ namespace IntroductionToASP.NETMVCCore.Controllers
             }
         }
 
-
-        [HttpPost]
+                [HttpPost]
         public IActionResult DisplayDynamicStudent()
         {
             return View("DisplayDynamic",

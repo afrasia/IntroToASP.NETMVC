@@ -9,7 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace IntroductionToASP.NETMVCCore
+namespace IntroToASP.NETMVC
 {
     public class Startup
     {

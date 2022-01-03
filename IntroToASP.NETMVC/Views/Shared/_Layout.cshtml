@@ -12,11 +12,11 @@
             <br />
             <br />
             @Html.ActionLink("Hello World", "Index", "Home") <br/>
-            @Html.ActionLink("Razor Example", "Razor", "Home") <br/>
-            @Html.ActionLink("Create Session Data (using 'Loosely Typed' view)", "CreateSession", "Home") <br/>
-            @Html.ActionLink("Create View Data (using 'Loosely Typed' view)", "CreateViewData", "Home") <br/>
-            @Html.ActionLink("Create Form Data (using 'Strongly Typed' view)", "Form", "Home") <br/>
-            @Html.ActionLink("Show Student/Teacher (using 'Dynamic View')", "DisplayDynamicForm", "Home") <br/>
+            @Html.ActionLink("Razor Syntax Demo", "RazorSyntaxDemo", "Home") <br/>
+            @Html.ActionLink("Create Loosely Typed view (using Session Data)", "CreateSession", "Home") <br/>
+            @Html.ActionLink("Create Loosely Typed' view (using ViewData/ViewBag)", "CreateViewData", "Home") <br/>
+            @Html.ActionLink("Create Strongly Typed view (using model objects)", "CreateStrong", "Home") <br/>
+            @Html.ActionLink("Create Dynamic view (using model objects)", "CreateDynamic", "Home") <br/>
         </header>
         <div class="content">
             @RenderBody()
