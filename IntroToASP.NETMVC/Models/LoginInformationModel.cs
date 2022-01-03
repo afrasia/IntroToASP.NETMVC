@@ -1,11 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace IntroductionToASP.NETMVCCore.Models
+namespace IntroToASP.NETMVC.Models
 {
     public class LoginInformationModel
     {

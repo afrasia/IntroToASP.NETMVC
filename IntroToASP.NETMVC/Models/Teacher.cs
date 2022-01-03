@@ -1,4 +1,4 @@
-﻿namespace IntroductionToASP.NETMVCCore.Controllers
+﻿namespace IntroToASP.NETMVC.Models
 {
     public class Teacher
     {
