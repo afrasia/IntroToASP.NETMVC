@@ -10,6 +10,7 @@ namespace IntroToASP.NETMVC.Controllers
         [HttpGet]
         public IActionResult Index()
         {
+            throw new Exception();
             return View();
         }
 
@@ -100,6 +101,11 @@ namespace IntroToASP.NETMVC.Controllers
                     Name = "Amir",
                     EmployeeId = "1"
                 });
+        }
+
+        public IActionResult Error()
+        {
+            return View();
         }
     }
 }
