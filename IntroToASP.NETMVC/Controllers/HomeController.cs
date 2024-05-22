@@ -10,7 +10,7 @@ namespace IntroToASP.NETMVC.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            throw new Exception();
+            //throw new Exception();
             return View();
         }
 
